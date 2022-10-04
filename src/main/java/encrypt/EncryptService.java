@@ -7,7 +7,7 @@ public class EncryptService {
 
     private final IdEncryptor encryptor = new IdEncryptor ();
 
-    public String encryptPassword (String password) {
+    public String encryptId (String password) {
         String resultHash = "";
         try {
             resultHash = encryptor.createHash (password);

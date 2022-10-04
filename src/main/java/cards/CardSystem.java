@@ -44,7 +44,7 @@ public class CardSystem {
     }
 
     private String generateId(String id) {
-        return encryptService.encryptPassword (id);
+        return encryptService.encryptId (id);
     }
 
     private String getRandomString(int length) {
@@ -59,7 +59,7 @@ public class CardSystem {
                 sb.append(str.charAt(number));
             }
             result = sb.toString();
-            isDublicated = encryptedIds.contains (encryptService.encryptPassword (result));
+            isDublicated = encryptedIds.contains (encryptService.encryptId (result));
         } while (isDublicated);
         return result;
     }
